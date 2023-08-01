@@ -1,0 +1,77 @@
+{% extends 'base2.html' %}
+{% block title %} Django Projects
+{% endblock title %}
+
+
+{% block djangoactive %}
+menu-active
+{% endblock djangoactive %}
+{% block body %}
+{% load static %}
+<section id="intro" style="background: url('static/img/bg/django.jpg') top center;width: 100%;height: 100vh;  
+  background-size: cover; overflow: hidden; position: relative;">
+    <div class="intro-container wow fadeIn">
+        <h1 class="mb-4 pb-0">My<br><span> Projects</span> </h1>
+        <p class="mb-4 pb-0">My Django Projects with source code</p>
+        {% comment %} <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4"
+            data-vbtype="video" data-autoplay="true"></a> {% endcomment %}
+        <a href='https://github.com/Chucks-Dave/' class="about-btn scrollto"><i class="fa-brands fa-github"></i>Github</a>
+    </div>
+</section>
+{% static 'img/djangoProjects' as baseurl %}
+<div class="container text-center my-4 myworksample px-0">
+    <h1 class="mb-5">My-Work</h1>
+    <p>I am currently learning some new concepts and trying to improve all my previous work and current ones  .
+        which are listed below you can visit each of my template just click on it and check it right now</p>
+</div>
+<div class="container">
+    <div class="row  mx-auto mt-2" id="mycards">
+        <!-- cards will appear hre by js -->
+        <div class="col col-lg-4 my-1 ">
+            <div class="card" style="width: 18rem;background-color:#6eff0085">
+                <img src="{{baseurl}}/cars.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <h5 class="card-title">Car Dealership</h5>
+                    </a>
+                    <p class="card-text"> A car dealership which offers services which a car dealership provides like repairs, sales and swap.
+                    </p>
+                    <a href="http://okechukwu1.pythonanywhere.com/"
+                        class="btn btn-primary">Click Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4 my-1">
+            <div class="card" style="width: 18rem;background-color:#6eff0085">
+                <img src="{{baseurl}}/school.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <h5 class="card-title">School management System</h5>
+                    </a>
+                    <p class="card-text">State of the art school management system which can be used in schools to perform and track different tasks.
+                        username:rachel
+                        password:ye
+                    </p>
+                    <a href="http://okechukwu4.pythonanywhere.com/"
+                        class="btn btn-primary">Click Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4 my-1">
+            <div class="card" style="width: 18rem;background-color:#6eff0085">
+                <img src="{{baseurl}}/car.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <h5 class="card-title">Car rental service</h5>
+                    </a>
+                    <p class="card-text">A rental service with user-auth where users can rent,review and rate services provided by the company.
+                    </p>
+                    <a href="https://okechukwu2.pythonanywhere.com/"
+                        class="btn btn-primary">Click Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock body %}
